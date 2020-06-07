@@ -301,7 +301,7 @@ class Content extends React.Component {
       // last in the DOM. It has no concept of "backwards/forwards", so we have
       // to check both orientations here. (2017/10/31)
       if (current) {
-        if (
+        if (!selectionsEqual ||
           (startContainer === current.startContainer &&
             startOffset === current.startOffset &&
             endContainer === current.endContainer &&
