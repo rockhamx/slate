@@ -411,7 +411,7 @@ class Point extends Record(DEFAULTS) {
     let point = this.merge({
       key: target.key,
       path: path == null ? node.getPath(target.key) : path,
-      offset: offset == null ? 0 : Math.min(offset, target.text.length),
+      offset: offset == null ? 0 : offset,
     })
 
     // COMPAT: There is an ambiguity, since a point can exist at the end of a
